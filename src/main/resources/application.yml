@@ -1,0 +1,15 @@
+#server
+server:
+  port: 8081
+  servlet:
+    context-path: /
+
+#Database
+spring:
+  datasource:
+    url: jdbc:postgresql://rds-postgres.cemocqtclv22.ap-south-1.rds.amazonaws.com:5432/scandologin
+    username: devstoriyohrds
+    password: PASS_RDS
+    driverClassName: org.postgresql.Driver
+    minimumIdle: 2
+    maximumPoolSize: 1000
