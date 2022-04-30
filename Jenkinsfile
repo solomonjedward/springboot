@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('Build Jar') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'RDS_Login', passwordVariable: 'PASS_RDS' , usernameVariable: 'USER_RDS')])
+                withCredentials([usernamePassword(credentialsId: 'RDS_Login', passwordVariable: 'RDS_Pass' , usernameVariable: 'RDS_User')])
                     {
                     sh 'mvn clean install'
                     }
